@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style media="screen">
+        .container{
+            width: 50%;
+            height: 200px;
+            overflow: auto;
+            margin-left:0 auto;
+        }
+        .static{ position: static; border: 2px solid green; }
+        .relative{
+            position: relative;
+            border: 2px solid red;
+            left: 20px; /*jarak dari posisi paling kiri sebesar 20px*/
+            bottom: 0; /*jarak dari posisi paling bawah sebesar0px */
+        }
+        .absolute{ position: absolute; border: 2px solid blue; left: 20px; bottom: 40px; }
+        .fixed{ position: fixed; border: 2px solid black; bottom: 0; right: 0; }
+        .sticky{
+            position: sticky;
+            border: 2px solid yellow;
+            top: 0;
+            left: 20px;
+            background:darkblue;
+            color:white;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p class="sticky">
+                Ini adalah contoh dari posisi sticky
+            </p>
+
+            <p class="static">
+                <b>Ini adalah contoh dari position static</b> <br>
+                Static positioned elements are not affected by the top, bottom, left, and right properties.
+                An element with position: static; is not positioned in any special way; it is always positioned according 
+                to the normal flow of the page:
+            </p>
+
+            <p class="relative">
+                <b>Ini adalah contoh dari position relative</b><br>
+                Relative positioning uses the same four positioning properties as absolute positioning. But instead of basing the position of the element upon the 
+                browser view port, it starts from where the element would be if it were still in the normal flow.
+                For example, if you have three paragraphs on your Web page, and the third has a position: relative style placed on it, its position will be offset based on its
+                current location-- not from the original sides of the view port.
+            </p>
+
+            <p class="absolute">
+                <b>Ini adalah Position absolute </b> <br>
+                Absolute positioning is done relative to the first relatively (or absolutely)
+                positioned parent element. In the case when there is no positioned parent element, 
+                the element that has position set to absolute will be positioned related directly 
+                to the HTML element (the page itself).An important thing to keep in mind while using 
+                absolute positioning is to make sure it is not overused, otherwise, it can lead to a maintenance nightmare.
+                The next thing, yet again, is to show an example of absolute positioning.In the example, the parent element has the position set to relative. 
+                Now, when you set the position of the child element to absolute, any additional positioning will be done relative to the parent element. 
+                The child element moves relatively to the top of the parent element by 100px and right of the parent element by 40px
+            </p>
+
+            <p class="fixed">
+                ini merupakan contoh dari position fixed
+            </p>
+        </div>
+    </body>
+</html>
